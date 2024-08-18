@@ -1,3 +1,4 @@
+
 nav{
   display: flex;
   flex-direction: row;
@@ -38,5 +39,11 @@ nav{
   .navigation.active{
     top: 15%;
     transition: all 0.9s ease-in;
+  }
+  .carousel{
+    height: 30vh;
+  }
+  .carousel  img{
+    height: 30vh;
   }
 }
