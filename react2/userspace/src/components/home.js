@@ -8,7 +8,7 @@ function Home() {
     <Carousel data-bs-theme="dark" className='carousel'>
       <Carousel.Item>
         <img
-        style={{height:'90vh'}}
+        style={{height:'98vh'}}
           className="d-block w-100"
           src={pic1}
           alt="First slide"
