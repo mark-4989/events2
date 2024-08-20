@@ -1,5 +1,6 @@
 const express =require('express');
 const mongoose =require('mongoose')
+const act =require("./action/action")
 
 const app = express();
 
@@ -8,7 +9,7 @@ const app = express();
 //   origin: 'http://localhost:3000'
 // };
 // app.use(cors(corOptions));
-
+// app.use(act())
 app.use(express.json());
 // app.use(express.urlencoded({ extended: true }));
 mongoose.connect("mongodb://127.0.0.1:27017/events")
