@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 
 function Contact() {
   return (
-    <Form>
+    <Form className='d-flex fd-row jc-space-around'>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>First Name</Form.Label>
         <Form.Control type="name" placeholder="Enter first name" required />
