@@ -2,19 +2,23 @@
   margin: 0;
   padding: 0;
   /* box-sizing: border-box; */
-  
+  background-color: #D96846;
   color: black;
 }
-.App{
+body{
   background-color: #D96846;
 }
+/* .App{
+  background-color: #D96846;
+} */
 nav{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 1.5rem;
+  /* margin: 1.5rem; */
   padding-top: 1rem;
   /* background-color: #408EC6; */
+  width:100%;
 }
 .navigation li{
   list-style-type: none;

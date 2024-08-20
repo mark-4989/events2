@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
+    <body>
   <Navbars/>
   <BrowserRouter>
   <Routes>
@@ -19,7 +19,7 @@ function App() {
   </Routes>
   </BrowserRouter>
  
-    </div>
+    </body>
   );
 }
 
