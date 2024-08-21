@@ -57,8 +57,16 @@ border-left: 0;
   font-size: 1.5rem;
   display: none;
 }
+.once{
+  background-color: #596235;
+}
 .forms{
-  
+  background-color: #596235;
+  justify-content: space-between;
+}
+.forms label{
+  background-color: #596235;
+  color: #CDCBD6;
 }
 @media (max-width: 768px) {
   .icons{
