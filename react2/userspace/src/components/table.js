@@ -19,15 +19,19 @@ function Table(){
             </tr>
         </thead>
         <tbody>
-        <tr>
-                <td>First Name</td>
-                <td>Last Name</td>
-                <td>Email</td>
-                <td>Phone Number</td>
-                <td>Event Type</td>
-                <td>Date</td>
-                <td>Guest Count</td>
-            </tr> 
+            { Client.map((Client)=>{
+                  <tr>
+                  <td>First Name</td>
+                  <td>Last Name</td>
+                  <td>Email</td>
+                  <td>Phone Number</td>
+                  <td>Event Type</td>
+                  <td>Date</td>
+                  <td>Guest Count</td>
+              </tr>
+            })
+      
+}
         </tbody>
     </table>
 </div>
