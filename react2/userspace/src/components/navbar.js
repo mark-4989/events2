@@ -15,7 +15,7 @@ const toggleMenu =()=>{
              
                 <li><a href="/">HOME</a></li>
                 <li><a href="about">ABOUT</a></li>
-                <li><a href="project">PROJECT</a></li>
+                <li><a href="gallery">GALLERY</a></li>
                 <li><a href="contact">CONTACT</a></li>
             </ul>
             <div className="icons" onClick={toggleMenu}>

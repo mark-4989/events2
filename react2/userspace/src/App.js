@@ -3,6 +3,8 @@ import './App.css';
 import Navbars from './components/navbar';
 import Home from './components/home';
 import Contact from './components/contact';
+import Gallery from './components/gallery';
+import About from './components/about';
 import{BrowserRouter,Routes,Route}from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -14,7 +16,8 @@ function App() {
   <BrowserRouter>
   <Routes>
     <Route path='/' element={<Home/>}></Route>
-    {/* <Route path='/' element={<Home/>}></Route> */}
+    <Route path='/about' element={<About/>}></Route>
+    <Route path='/gallery' element={<Gallery/>}></Route>
     <Route path='/contact' element={<Contact/>}></Route>
   </Routes>
   </BrowserRouter>
