@@ -1,15 +1,16 @@
 const express =require('express');
 const mongoose =require('mongoose')
 const userModel = require('./models/userModel')
+const cors = require('cors')
 
 
 const app = express();
 
 
-// var corOptions = {
-//   origin: 'http://localhost:3000'
-// };
-// app.use(cors(corOptions));
+var corOptions = {
+  origin: 'http://localhost:3000'
+};
+app.use(cors(corOptions));
 // app.use(act)
 // require("./routes/clientRoutes")
 app.use(express.json());
