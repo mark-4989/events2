@@ -6,7 +6,7 @@ import pic3 from '../images/pexels-asadphoto-1024968.jpg'
 function Home() {
   return (<div>
 
- 
+ <section>
     <Carousel data-bs-theme="dark" className='carousel'>
       <Carousel.Item>
         <img
@@ -46,12 +46,21 @@ function Home() {
           </p>
         </Carousel.Caption>
       </Carousel.Item>
+     
+     
     </Carousel>
+    <div className='hider'>
+      <img src='../images/pexels-asadphoto-1024993.jpg'></img>
+      </div>
+    </section>
     <div className='second'>
 <h2>Event Planning & Designing</h2>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.<br></br> Praesent commodo cursus magna, vel scelerisque nisl consectetur.Lorem ipsum dolor sit amet, <br></br>consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.<br></br> Praesent commodo cursus magna, vel scelerisque nisl consectetur.<br></br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br>Nulla vitae elit libero, a pharetra augue mollis interdum.<br></br> Praesent commodo cursus magna, vel scelerisque nisl consectetur.
 </p>
+    </div>
+    <div>
+
     </div>
     </div>
   );

@@ -59,6 +59,11 @@ border-left: 0;
   font-size: 1.5rem;
   display: none;
 }
+ 
+/* carrousel */
+.hider{
+  display: none;
+}
 /* .once{
  
 } */
@@ -68,7 +73,7 @@ form {
   /* align-items: center; */
   /* text-align: center; */
   width: 40vw;
-  height: 60vh;
+  height: 100vh;
   border-radius: 20px;
   float: right;
   margin-top: 50px;
@@ -81,6 +86,7 @@ form {
   text-align: center;
   padding-right: 20px;
   padding-top: 40px;
+  border-top-left-radius: 20px;
 }
 .forms input{
   margin-right: 20px;
@@ -139,10 +145,12 @@ padding: 2rem;
     top: 15%;
     transition: all 0.9s ease-in;
   }
+  /* carousel */
   .carousel{
     display: none;
   }
-  .carousel  img{
-    height: 30vh;
-  }
+  .hider img{
+display: inline;
+
+ }
 }
