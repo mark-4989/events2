@@ -18,7 +18,7 @@ function Contact() {
      <label>Date : </label>
      <input type='input' name='date'  placeholder='enter event date' required /><br></br>
      <label>Guest Count : </label>
-     <input type='input' name='guestcount'  placeholder='enter number of guest' required />
+     <input type='input' name='guestcount'  placeholder='enter number of guest' required /><br></br>
       <Button variant="primary" type="submit">
         Submit
       </Button>
