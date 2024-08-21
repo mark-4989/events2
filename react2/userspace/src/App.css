@@ -1,6 +1,6 @@
 *{
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
   /* box-sizing: border-box; */
   background-color: #D96846;
   color: black;
@@ -11,6 +11,7 @@ body{
 /* .App{
   background-color: #D96846;
 } */
+ /* navigation bar */
 nav{
   display: flex;
   flex-direction: row;
@@ -19,6 +20,7 @@ nav{
   padding-top: 1rem;
   /* background-color: #408EC6; */
   width:100%;
+  padding-bottom: 2rem;
 }
 .navigation li{
   list-style-type: none;
@@ -60,6 +62,7 @@ border-left: 0;
 /* .once{
  
 } */
+ /* form from contact */
 form {
   background-color: #596235;
   /* align-items: center; */
@@ -83,6 +86,29 @@ form {
   margin-right: 20px;
   text-align: center;
 }
+/* div from home */
+  .second{
+margin-top: 2rem;
+background-color: #596235;
+color: #CDCBD6;
+text-align: center;
+height: 60vh;
+margin-bottom: 2rem;
+padding: 2rem;
+  }
+  .second h2{
+    background-color: #596235;
+    font-size: 2.5rem;
+    padding:2rem;
+    font-family:  Arial, sans-serif;
+    font-weight: bolder;
+  }
+  .second p{
+    background-color: #596235;
+    color: #CDCBD6;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3rem;
+  }
 @media (max-width: 768px) {
   .icons{
     display:block;
@@ -114,7 +140,7 @@ form {
     transition: all 0.9s ease-in;
   }
   .carousel{
-    height: 30vh;
+    display: none;
   }
   .carousel  img{
     height: 30vh;
