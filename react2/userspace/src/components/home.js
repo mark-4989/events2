@@ -4,7 +4,9 @@ import pic2 from '../images/pexels-asadphoto-169198.jpg'
 import pic3 from '../images/pexels-asadphoto-1024968.jpg'
 
 function Home() {
-  return (
+  return (<div>
+
+ 
     <Carousel data-bs-theme="dark" className='carousel'>
       <Carousel.Item>
         <img
@@ -45,6 +47,13 @@ function Home() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    <div className='second'>
+<h2>Event Planning $ Designing</h2>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+</p>
+    </div>
+    </div>
   );
 }
 
