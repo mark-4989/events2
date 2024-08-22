@@ -5,6 +5,7 @@ function Contact() {
   return (
     <div className='once'>
     <Form className='forms'>
+      <h2>Enter Your Details Here</h2>
      <label>First Name : </label>
      <input type='string' name='firstname'  placeholder='enter first name' required />
      <label>Last Name : </label>
