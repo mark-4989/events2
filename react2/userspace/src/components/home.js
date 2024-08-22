@@ -2,6 +2,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import pic1 from '../images/pexels-joshsorenson-976866.jpg';
 import pic2 from '../images/pexels-asadphoto-169198.jpg'
 import pic3 from '../images/pexels-asadphoto-1024968.jpg'
+import pic4 from '../images/Savvy Events & Entertainment.jpeg';
+import pic5 from '../images/pexels-asadphoto-1024993.jpg';
 
 function Home() {
   return (<div>
@@ -50,7 +52,7 @@ function Home() {
      
     </Carousel>
     <div className='hider'>
-      <img src='../images/pexels-asadphoto-1024993.jpg'></img>
+      <img src={pic5} alt='image loading'></img>
       </div>
     </section>
     <div className='second'>
@@ -59,8 +61,19 @@ function Home() {
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.<br></br> Praesent commodo cursus magna, vel scelerisque nisl consectetur.Lorem ipsum dolor sit amet, <br></br>consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.<br></br> Praesent commodo cursus magna, vel scelerisque nisl consectetur.<br></br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br>Nulla vitae elit libero, a pharetra augue mollis interdum.<br></br> Praesent commodo cursus magna, vel scelerisque nisl consectetur.
 </p>
     </div>
-    <div>
-
+    <div className='cards' >
+<div className='card1'>
+  <img src={pic4} alt='image loading'></img>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+</div>
+<div className='card1'>
+  <img src={pic4} alt='image loading'></img>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+</div>
+<div className='card1'>
+  <img src={pic4} alt='image loading'></img>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+</div>
     </div>
     </div>
   );
