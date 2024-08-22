@@ -181,6 +181,10 @@ padding: 2rem;
     /* background: #596235; */
     margin-top: 8rem;
 padding: 2rem;
+border: #596235 3px solid;
+   }
+   .wedding .wedd{
+    border: #596235 3px solid;
    }
    .wedding .wedd1 img{
     width: 25rem;

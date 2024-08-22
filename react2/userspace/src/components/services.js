@@ -34,6 +34,38 @@ function Services (){
         <img src={pic2} ></img>
     </div>
 </div>
+<div className="wedding">
+    <div className="wedd">
+<h3>co-oprate services</h3>
+<ul>
+    <li>one</li>
+    <li>one</li>
+    <li>one</li>
+    <li>one</li>
+    <li>one</li>
+    <li>one</li>
+</ul>
+    </div>
+    <div className="wedd1">
+        <img src={pic2} ></img>
+    </div>
+</div>
+<div className="wedding">
+    <div className="wedd">
+<h3>Social Gathering</h3>
+<ul>
+    <li>one</li>
+    <li>one</li>
+    <li>one</li>
+    <li>one</li>
+    <li>one</li>
+    <li>one</li>
+</ul>
+    </div>
+    <div className="wedd1">
+        <img src={pic2} ></img>
+    </div>
+</div>
     </div>    
     )
 }
