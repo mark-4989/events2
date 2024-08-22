@@ -131,6 +131,8 @@ padding: 2rem;
   }
   .cards .card1 p{
     color: #CDCBD6;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.1rem;
   }
   .cards .card1 .picss{
     /* position: relative; */
