@@ -63,16 +63,26 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero,
     </div>
     <div className='cards' >
 <div className='card1'>
+<h3>Wedding</h3>
+  <div className='picss'>
   <img src={pic4} alt='image loading'></img>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+  </div>
+ 
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 </div>
 <div className='card1'>
+<h3>Coprates</h3>
+<div className='picss'>
   <img src={pic4} alt='image loading'></img>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+  </div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 </div>
 <div className='card1'>
+ <h3>Social Gathering</h3>
+<div className='picss'>
   <img src={pic4} alt='image loading'></img>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+  </div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 </div>
     </div>
     </div>

@@ -116,6 +116,35 @@ padding: 2rem;
     font-size: 1.3rem;
   }
   /* cards on home */
+  .cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+   text-align: center;
+   color: #CDCBD6;
+  }
+  .cards .card1{
+    padding:20px ;
+    text-align: center;
+    color: #CDCBD6;
+  }
+  .cards .card1 p{
+    color: #CDCBD6;
+  }
+  .cards .card1 .picss{
+    /* position: relative; */
+    /* width: 16rem; */
+    /* height: 16rem; */
+    border-radius: 70%;
+  }
+  .cards .card1 .picss img{
+    border: 2px #596235 solid;
+    border-radius: 70%;
+    width: 15rem;
+    height: 15rem;
+    padding: 15px;
+  }
 @media (max-width: 768px) {
   .icons{
     display:block;
