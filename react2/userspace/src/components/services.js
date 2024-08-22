@@ -3,6 +3,35 @@ import React from "react";
 import pic2 from '../images/pexels-asadphoto-169198.jpg'
 
 function Services (){
+    handleThunb = () =>{
+// thumbnails
+main = document.getElementById("galla");
+//first thumb
+gallery1 = document.getElementById("gallery1");
+gallery1Src = document.getElementById("gallery1").src;
+//sec thumb
+gallery2 = document.getElementById("gallery2");
+gallery2Src = document.getElementById("gallery2").src;
+//third
+gallery3 = document.getElementById("gallery3");
+gallery3Src = document.getElementById("gallery3").src;
+//fourth
+gallery4 = document.getElementById("gallery4");
+gallery4Src = document.getElementById("gallery4").src;
+//click
+// gallery1.addEventListener("click", function() {
+//     main.src = gallery1Src;
+// });
+// gallery2.addEventListener("click", function() {
+//     main.src = gallery2Src;
+// });
+// gallery3.addEventListener("click", function() {
+//     main.src = gallery3Src;
+// });
+// gallery4.addEventListener("click", function() {
+//     main.src = gallery4Src;
+// });
+    }
     return(
     <div className="servicess">
 <div className="service">
@@ -31,7 +60,24 @@ function Services (){
 </ul>
     </div>
     <div className="wedd1">
-        <img src={pic2} alt="please wait"  ></img>
+        <img src={pic2} alt="please wait"  id="galla" ></img>
+        
+        <div class="thumbnails">
+                <ul>
+                    <li>
+                        <img src={pic2} alt="" id="gallery1" onClick={handleThunb}/>
+                    </li>
+                    <li>
+                        <img src={pic2} alt="" id="gallery2" />
+                    </li>
+                    <li>
+                        <img src={pic2} alt="" id="gallery3" />
+                    </li>
+                    <li>
+                        <img src={pic2} alt="" id="gallery4" />
+                    </li>
+                </ul>
+            </div>
     </div>
 </div>
 <div className="coprate">

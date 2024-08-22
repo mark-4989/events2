@@ -157,6 +157,8 @@ padding: 2rem;
     height: 60vh;
     justify-content: space-around;
     padding-top: 70px;
+    margin-left: 10px;
+    margin-right: 10px;
     /* flex-shrink: calc(20%); */
   }
   .service .wed1 p{
@@ -183,6 +185,8 @@ padding: 2rem;
     margin-top: 8rem;
 padding: 2rem;
 border: #596235 3px solid;
+margin-left: 10px;
+margin-right: 10px;
    }
    .wedding .wedd{
     border: #596235 3px solid;
@@ -193,6 +197,26 @@ border: #596235 3px solid;
     width: 25rem;
     height: 20rem;
    }
+   .wedding .wedd1 .thumbnails {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.wedding .wedd1  .thumbnails ul {
+  display: flex;
+  padding-right: 50px;
+}
+
+.wedding .wedd1 .thumbnails img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
    /* cop card */
    .coprate{
     display: flex;
@@ -204,6 +228,8 @@ border: #596235 3px solid;
 padding: 2rem;
 border: #596235 3px solid;
 height: 70vh;
+margin-left: 10px;
+margin-right: 10px;
    }
    .coprate .cop{
     border: #596235 3px solid;
@@ -253,6 +279,8 @@ color: #CDCBD6;
     margin-top: 8rem;
 padding: 2rem;
 border: #596235 3px solid;
+margin-left: 10px;
+margin-right: 10px;
    }
    .social .soc{
     border: #596235 3px solid;
