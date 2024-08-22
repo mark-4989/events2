@@ -15,6 +15,25 @@ function Services (){
         <img src={pic2} ></img>
     </div>
 </div>
+<div style={{textAlign:'center',marginTop:'3rem'}}>
+    <h2>some of the services we offer</h2>
+</div>
+<div className="wedding">
+    <div className="wedd">
+<h3>wedding services</h3>
+<ul>
+    <li>one</li>
+    <li>one</li>
+    <li>one</li>
+    <li>one</li>
+    <li>one</li>
+    <li>one</li>
+</ul>
+    </div>
+    <div className="wedd1">
+        <img src={pic2} ></img>
+    </div>
+</div>
     </div>    
     )
 }

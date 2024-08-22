@@ -157,6 +157,7 @@ padding: 2rem;
     height: 60vh;
     justify-content: space-around;
     padding-top: 70px;
+    flex-shrink: calc(20%);
   }
   .service .wed1 p{
     color: #CDCBD6;
@@ -172,6 +173,19 @@ padding: 2rem;
     height: 20rem;
   
   }
+   .wedding{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* background: #596235; */
+    margin-top: 8rem;
+padding: 2rem;
+   }
+   .wedding .wedd1 img{
+    width: 25rem;
+    height: 20rem;
+   }
 @media (max-width: 768px) {
   .icons{
     display:block;
