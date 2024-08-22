@@ -185,6 +185,8 @@ border: #596235 3px solid;
    }
    .wedding .wedd{
     border: #596235 3px solid;
+    font-size: 1.5rem;
+    padding: 1rem;
    }
    .wedding .wedd1 img{
     width: 25rem;
@@ -213,6 +215,8 @@ height: 70vh;
    }
    .coprate .cop  ul{
     background-color: #596235;
+    font-size: 1.5rem;
+    margin-top: 20px;
    }
    .coprate .cop  ul li{
     background-color: #596235;
@@ -251,6 +255,8 @@ border: #596235 3px solid;
    }
    .social .soc{
     border: #596235 3px solid;
+    font-size: 1.5rem;
+    padding: 2rem;
    }
    .social .soc1 img{
     width: 25rem;
