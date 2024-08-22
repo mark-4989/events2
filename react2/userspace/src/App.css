@@ -147,6 +147,31 @@ padding: 2rem;
     height: 15rem;
     padding: 15px;
   }
+  /* service section */
+  .service{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #596235;
+    color: #CDCBD6;
+    height: 60vh;
+    justify-content: space-around;
+    padding-top: 70px;
+  }
+  .service .wed1 p{
+    color: #CDCBD6;
+    background-color: #596235;
+    height: 50vh;
+  }
+  .service .wed2{
+    background-color: #596235;
+    height: 50vh;
+  }
+  .service .wed2 img{
+    width: 25rem;
+    height: 20rem;
+  
+  }
 @media (max-width: 768px) {
   .icons{
     display:block;
