@@ -3,21 +3,21 @@ import React from "react";
 import pic2 from '../images/pexels-asadphoto-169198.jpg'
 
 function Services (){
-    handleThunb = () =>{
-// thumbnails
-main = document.getElementById("galla");
-//first thumb
-gallery1 = document.getElementById("gallery1");
-gallery1Src = document.getElementById("gallery1").src;
-//sec thumb
-gallery2 = document.getElementById("gallery2");
-gallery2Src = document.getElementById("gallery2").src;
-//third
-gallery3 = document.getElementById("gallery3");
-gallery3Src = document.getElementById("gallery3").src;
-//fourth
-gallery4 = document.getElementById("gallery4");
-gallery4Src = document.getElementById("gallery4").src;
+//     handleThunb = () =>{
+// // thumbnails
+// main = document.getElementById("galla");
+// //first thumb
+// gallery1 = document.getElementById("gallery1");
+// gallery1Src = document.getElementById("gallery1").src;
+// //sec thumb
+// gallery2 = document.getElementById("gallery2");
+// gallery2Src = document.getElementById("gallery2").src;
+// //third
+// gallery3 = document.getElementById("gallery3");
+// gallery3Src = document.getElementById("gallery3").src;
+// //fourth
+// gallery4 = document.getElementById("gallery4");
+// gallery4Src = document.getElementById("gallery4").src;
 //click
 // gallery1.addEventListener("click", function() {
 //     main.src = gallery1Src;
@@ -31,7 +31,7 @@ gallery4Src = document.getElementById("gallery4").src;
 // gallery4.addEventListener("click", function() {
 //     main.src = gallery4Src;
 // });
-    }
+    // }
     return(
     <div className="servicess">
 <div className="service">
@@ -65,7 +65,7 @@ gallery4Src = document.getElementById("gallery4").src;
         <div class="thumbnails">
                 <ul>
                     <li>
-                        <img src={pic2} alt="" id="gallery1" onClick={handleThunb}/>
+                        <img src={pic2} alt="" id="gallery1" />
                     </li>
                     <li>
                         <img src={pic2} alt="" id="gallery2" />

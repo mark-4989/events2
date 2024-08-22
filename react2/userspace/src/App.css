@@ -78,19 +78,28 @@ form {
   float: right;
   margin-top: 50px;
   /* padding: 20px; */
+  display: block;
+  margin-right: 30px;
 }
 .forms label{
   background-color: #596235;
   color: black;
-  align-items: center;
+  /* align-items: center; */
   text-align: center;
   padding-right: 20px;
   padding-top: 40px;
   border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-size: 1rem;
+  display: block;
 }
 .forms input{
   margin-right: 20px;
   text-align: center;
+  background-color: #596235;
+  color: #CDCBD6;
+  align-items: center;
+  justify-items: center;
 }
 /* div from home */
   .second{
