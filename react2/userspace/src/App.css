@@ -157,12 +157,13 @@ padding: 2rem;
     height: 60vh;
     justify-content: space-around;
     padding-top: 70px;
-    flex-shrink: calc(20%);
+    /* flex-shrink: calc(20%); */
   }
   .service .wed1 p{
     color: #CDCBD6;
     background-color: #596235;
-    height: 50vh;
+    height: 51vh;
+    font-size: 1.3rem;
   }
   .service .wed2{
     background-color: #596235;
@@ -304,5 +305,20 @@ display: inline;
  .hider img{
   width: 650px;
   height: 300px;
+ }
+ /* services section */
+ .service{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #596235;
+  color: #CDCBD6;
+  height: 60vh;
+  justify-content: space-around;
+  padding-top: 70px;
+  /* flex-shrink: calc(20%); */
+}
+ .service .wed2{
+  display: none;
  }
 }
