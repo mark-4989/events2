@@ -190,6 +190,72 @@ border: #596235 3px solid;
     width: 25rem;
     height: 20rem;
    }
+   /* cop card */
+   .coprate{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background: #596235;
+    margin-top: 8rem;
+padding: 2rem;
+border: #596235 3px solid;
+height: 70vh;
+   }
+   .coprate .cop{
+    border: #596235 3px solid;
+    background-color: #596235;
+    color: #CDCBD6;
+   }
+   .coprate .cop h3{
+    color: #CDCBD6;
+    background-color: #596235;
+   }
+   .coprate .cop  ul{
+    background-color: #596235;
+   }
+   .coprate .cop  ul li{
+    background-color: #596235;
+    color: #CDCBD6;
+   }
+   .coprate .cop1{
+    background-color: #596235;
+   }
+   .coprate .cop1 img{
+    width: 25rem;
+    height: 20rem;
+    background-color: #596235;
+   }
+   .coprate .cop2{
+    background-color: #596235;
+   }
+   .coprate .cop2 ul{
+background-color: #596235;
+margin-top: 60px;
+font-size: 1.5rem;
+   }
+   .coprate .cop2 ul li{
+background-color: #596235;
+color: #CDCBD6;
+   }
+   /* soci card */
+   .social{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* background: #596235; */
+    margin-top: 8rem;
+padding: 2rem;
+border: #596235 3px solid;
+   }
+   .social .soc{
+    border: #596235 3px solid;
+   }
+   .social .soc1 img{
+    width: 25rem;
+    height: 20rem;
+   }
 @media (max-width: 768px) {
   .icons{
     display:block;
