@@ -1,9 +1,9 @@
 import Carousel from 'react-bootstrap/Carousel';
-import pic1 from '../images/pexels-joshsorenson-976866.jpg';
-import pic2 from '../images/pexels-asadphoto-169198.jpg'
-import pic3 from '../images/pexels-asadphoto-1024968.jpg'
+import pic1 from '../picture/pexels-joshsorenson-976866.jpg';
+import pic2 from '../picture/pexels-asadphoto-169198.jpg'
+import pic3 from '../picture/pexels-asadphoto-1024968.jpg'
 // import pic4 from '../images/Savvy Events & Entertainment.jpeg';
-import pic5 from '../images/pexels-asadphoto-1024993.jpg';
+import pic5 from '../picture/pexels-asadphoto-1024993.jpg';
 
 function Home() {
   return (<div>

@@ -1,4 +1,4 @@
-import pic2 from '../images/pexels-asadphoto-169198.jpg'
+import pic2 from '../picture/pexels-asadphoto-169198.jpg'
 
  function About() {
     
