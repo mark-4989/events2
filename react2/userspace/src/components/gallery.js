@@ -46,7 +46,11 @@ return(
             <TagButton name="corporate" handleTag={setTag}/>
             <TagButton name="social" handleTag={setTag}/>
             {/* looping through all images */}
-{filterd.map(image => <div>{image.imageName}</div>)}
+{filterd.map(image => 
+<div key={image.id}>
+<img src={`/images/${image.imageName}`} alt="" />
+    {image.imageName}
+</div>)}
         </div>
 
     </div>
