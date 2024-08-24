@@ -41,10 +41,10 @@ tag === 'all' ? setFilterd(images) : setFilterd(images.filter(image => image.tag
 return(
     <div className='gallery'>
         <div>
-            <TagButton name="all"/>
-            <TagButton name="wedding"/>
-            <TagButton name="corporate"/>
-            <TagButton name="social-gathering"/>
+            <TagButton name="all" handleTag={setTag}/>
+            <TagButton name="wedding" handleTag={setTag}/>
+            <TagButton name="corporate" handleTag={setTag}/>
+            <TagButton name="social" handleTag={setTag}/>
             {/* looping through all images */}
 {filterd.map(image => <div>{image.imageName}</div>)}
         </div>
@@ -54,8 +54,8 @@ return(
 }
 //button that i will reuse muliple times
 // parse prop where name rep tag from array
-const TagButton = ({name})=>{
+const TagButton = ({name ,handleTag})=>{
     // name is made to uppercase
-return <button>{name.toUpperCase()}</button>
+return <button onClick={()=>handleTag(name)}>{name.toUpperCase()}</button>
 }
 export default Gallery;
