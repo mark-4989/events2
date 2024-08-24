@@ -40,16 +40,19 @@ tag === 'all' ? setFilterd(images) : setFilterd(images.filter(image => image.tag
 
 return(
     <div className='gallery'>
+        <div className="tags">
+        <TagButton name="all" handleTag={setTag} tagActive={tag === 'all' ? true : false}/>
+            <TagButton name="wedding" handleTag={setTag} tagActive={tag === 'wedding' ? true : false}/>
+            <TagButton name="corporate" handleTag={setTag} tagActive={tag === 'corporate' ? true : false}/>
+            <TagButton name="social" handleTag={setTag} tagActive={tag === 'social' ? true : false}/>
+        </div>
         <div className="con">
-            <TagButton name="all" handleTag={setTag}/>
-            <TagButton name="wedding" handleTag={setTag}/>
-            <TagButton name="corporate" handleTag={setTag}/>
-            <TagButton name="social" handleTag={setTag}/>
+            
             {/* looping through all images */}
 {filterd.map(image => 
 <div key={image.id} className="con1">
 <img src={`/images/${image.imageName}`} alt="" />
-    {image.imageName}
+    {/* {image.imageName} */}
 </div>)}
         </div>
 
@@ -58,8 +61,8 @@ return(
 }
 //button that i will reuse muliple times
 // parse prop where name rep tag from array
-const TagButton = ({name ,handleTag})=>{
+const TagButton = ({name ,handleTag ,tagActive})=>{
     // name is made to uppercase
-return <button onClick={()=>handleTag(name)}>{name.toUpperCase()}</button>
+return <button className={`taged ${tagActive ? 'active': null}`} onClick={()=>handleTag(name)}>{name.toUpperCase()}</button>
 }
 export default Gallery;
