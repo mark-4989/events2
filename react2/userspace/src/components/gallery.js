@@ -63,6 +63,6 @@ return(
 // parse prop where name rep tag from array
 const TagButton = ({name ,handleTag ,tagActive})=>{
     // name is made to uppercase
-return <button className={`taged ${tagActive ? 'active': null}`} onClick={()=>handleTag(name)}>{name.toUpperCase()}</button>
+return <button className={`taged ${tagActive ? 'actived': null}`} onClick={()=>handleTag(name)}>{name.toUpperCase()}</button>
 }
 export default Gallery;

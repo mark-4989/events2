@@ -349,6 +349,12 @@ margin-right: 1rem;
       font-family: Georgia, 'Times New Roman', Times, serif;
       /* font-size: larger; */
       font-weight: bolder;
+      border: #D96846 2px solid;
+    }
+    .actived{
+      background-color: #D96846;
+      color: #CDCBD6;
+      border: #CDCBD6 2px solid;
     }
 @media (max-width: 768px) {
   .icons{
