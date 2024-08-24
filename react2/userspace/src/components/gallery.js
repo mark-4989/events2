@@ -40,14 +40,14 @@ tag === 'all' ? setFilterd(images) : setFilterd(images.filter(image => image.tag
 
 return(
     <div className='gallery'>
-        <div>
+        <div className="con">
             <TagButton name="all" handleTag={setTag}/>
             <TagButton name="wedding" handleTag={setTag}/>
             <TagButton name="corporate" handleTag={setTag}/>
             <TagButton name="social" handleTag={setTag}/>
             {/* looping through all images */}
 {filterd.map(image => 
-<div key={image.id}>
+<div key={image.id} className="con1">
 <img src={`/images/${image.imageName}`} alt="" />
     {image.imageName}
 </div>)}

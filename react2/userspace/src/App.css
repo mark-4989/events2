@@ -317,6 +317,21 @@ margin-right: 10px;
     width: 25rem;
     height: 20rem;
    }
+   /* gallery section */
+   .con{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+   }
+   .con .con1{
+padding: 5px;
+border: 2px solid #CDCBD6;
+   }
+    .con .con1 img{
+      width: 100%;
+    }
 @media (max-width: 768px) {
   .icons{
     display:block;
