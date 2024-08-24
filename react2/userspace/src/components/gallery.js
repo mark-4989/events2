@@ -1,3 +1,4 @@
+import { all } from "axios";
 import React, { useEffect, useState } from "react";
 
 const images=[
@@ -29,7 +30,7 @@ const images=[
 ]
 function Gallery (){
     // used react hooks
-   const[tag,setTag]= useState('social')
+   const[tag,setTag]= useState('all')
    //storing filted tags
    const [filterd,setFilterd] =useState([])
    //monituring tag if it changes it shows filterd tag
@@ -40,11 +41,21 @@ tag === 'all' ? setFilterd(images) : setFilterd(images.filter(image => image.tag
 return(
     <div className='gallery'>
         <div>
+            <TagButton name="all"/>
+            <TagButton name="wedding"/>
+            <TagButton name="corporate"/>
+            <TagButton name="social-gathering"/>
             {/* looping through all images */}
 {filterd.map(image => <div>{image.imageName}</div>)}
         </div>
 
     </div>
 )
+}
+//button that i will reuse muliple times
+// parse prop where name rep tag from array
+const TagButton = ({name})=>{
+    // name is made to uppercase
+return <button>{name.toUpperCase()}</button>
 }
 export default Gallery;
