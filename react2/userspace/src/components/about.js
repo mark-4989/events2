@@ -19,6 +19,11 @@ import pic2 from '../images/pexels-asadphoto-169198.jpg'
         <img src={pic2} ></img>
     </div>
 </div>
+<div>
+    <div>
+        
+    </div>
+</div>
         </div>
     )
 }

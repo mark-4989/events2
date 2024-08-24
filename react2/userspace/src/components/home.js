@@ -2,7 +2,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import pic1 from '../images/pexels-joshsorenson-976866.jpg';
 import pic2 from '../images/pexels-asadphoto-169198.jpg'
 import pic3 from '../images/pexels-asadphoto-1024968.jpg'
-import pic4 from '../images/Savvy Events & Entertainment.jpeg';
+// import pic4 from '../images/Savvy Events & Entertainment.jpeg';
 import pic5 from '../images/pexels-asadphoto-1024993.jpg';
 
 function Home() {
@@ -53,6 +53,9 @@ function Home() {
     </Carousel>
     <div className='hider'>
       <img src={pic5} alt='image loading'></img>
+      <div className='centerd'>
+        company name
+      </div>
       </div>
     </section>
     <div className='second'>
@@ -65,7 +68,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero,
 <div className='card1'>
 <h3>Wedding</h3>
   <div className='picss'>
-  <img src={pic4} alt='image loading'></img>
+  <img src={pic5} alt='image loading'></img>
   </div>
  
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -73,14 +76,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero,
 <div className='card1'>
 <h3>Coprates</h3>
 <div className='picss'>
-  <img src={pic4} alt='image loading'></img>
+  <img src={pic5} alt='image loading'></img>
   </div>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 </div>
 <div className='card1'>
  <h3>Social Gathering</h3>
 <div className='picss'>
-  <img src={pic4} alt='image loading'></img>
+  <img src={pic5} alt='image loading'></img>
   </div>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 </div>

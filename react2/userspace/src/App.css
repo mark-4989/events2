@@ -216,7 +216,7 @@ margin-right: 10px;
    .wedding .wedd{
     border: #596235 3px solid;
     font-size: 1.5rem;
-    padding: 1rem;
+    padding: 2rem;
    }
    .wedding .wedd1 img{
     width: 25rem;
@@ -232,6 +232,7 @@ margin-right: 10px;
 .wedding .wedd1  .thumbnails ul {
   display: flex;
   padding-right: 50px;
+  list-style: none;
 }
 
 .wedding .wedd1 .thumbnails img {
@@ -352,13 +353,21 @@ margin-right: 10px;
   }
   .hider{
 display: inline;
-
+position: relative;
+/* text-align: center; */
+/* color: white; */
 
  }
  .hider img{
   width: 650px;
   height: 300px;
  }
+.hider .centered h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
  /* services section */
  .service{
   display: flex;
