@@ -1,7 +1,9 @@
-const express =require ('express')
-const ClientRoute = require('../action/action')
-const Routes = express.Router()
+import express from 'express';
 
-    Routes.post('./CreateClient', ClientRoute.CreateClient)
+const router = express.Router();
 
-    module.exports = Routes;
+router.get('/',(req,res)=>{
+res.send('this is working')
+})
+
+export default router;

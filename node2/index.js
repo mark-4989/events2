@@ -3,7 +3,13 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 
+import postsRoutes from './routes/clientRoutes.js';
+
+// const ClientRoutes = require('./routes/clientRoutes');
+
 const app = express();
+
+app.use('/api', postsRoutes)
 
 // ensuring post is ok
 app.use(bodyParser.json({extended:true}))
