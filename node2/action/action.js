@@ -1,15 +1,22 @@
-const userModel = require('../models/userModel')
+import clientel from '../models/userModel.js'
 
-module.exports={
-// post meth and call back function
-CreateClient: async (req, res, next) => {
-    try {
-      const client = new userModel(req.body);
-      const result = await client.save();
-      res.send(result);
-    } catch (error) {
-      console.log(error.message);
-      next();
-    }
-  }
+// an asyncronus function
+export const getsDetails = async (req,res)=>{
+try {
+  const Clientel = await clientel.find()
+  res.status(200).json(Clientel)
+} catch (error) {
+  res.status(404).json({message: error.message})
 }
+}
+
+    export const postsDetails = async (req,res)=>{
+      const post = req.body
+const newPost = new clientel(post)
+try {
+  await newPost.save()
+  res.status(201).json(newPost)
+} catch (error) {
+  res.status(409).json({message: error.message})
+}
+    }

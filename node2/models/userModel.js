@@ -8,5 +8,5 @@ import mongoose from "mongoose"
     siku:Date,
     guestcount:Number
  })
- const clientModel =mongoose.model("user",clientSchema)
+ const clientModel =mongoose.model("clientmodel",clientSchema)
  export default clientModel;

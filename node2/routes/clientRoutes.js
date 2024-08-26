@@ -1,9 +1,9 @@
 import express from 'express';
+import { getsDetails, postsDetails } from '../action/action.js';
 
 const router = express.Router();
 
-router.get('/',(req,res)=>{
-res.send('this is working')
-})
+router.get('/',getsDetails)
+router.post('/',postsDetails)
 
 export default router;
