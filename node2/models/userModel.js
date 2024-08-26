@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from "mongoose"
  const clientSchema = new mongoose.Schema({
     firstname: String,
     lastname: String,
@@ -9,4 +9,4 @@ const mongoose = require('mongoose')
     guestcount:Number
  })
  const clientModel =mongoose.model("user",clientSchema)
- module.exports=clientModel
+ export default clientModel;
