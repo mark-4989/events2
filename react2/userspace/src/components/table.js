@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function Table(){
     const[Client,setClient]=useState([])
+    useEffect(()=>{
+        axios.get('http://localhost:3001/api')
+        .then(res =>console.log(res))
+        .catch(err =>console.log(err))
+    },[] )
     return(
         <div>
 <div>
