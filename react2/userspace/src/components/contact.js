@@ -17,7 +17,7 @@ function Contact() {
 })
 const handleSubmit = (e)=>{
 e.preventDefault();
-axios.post('http://localhost:3001/api/')
+axios.post('http://localhost:3001/api/',[setData])
 .then(res=>console.log(res))
 .catch(err=>console.log(err))
 }
@@ -32,13 +32,13 @@ axios.post('http://localhost:3001/api/')
      <label>Email : </label>
      <input type='' name='email'  placeholder='enter email' required onChange={e=> setData({...data,email:e.target.value})}/>
      <label>Phone Number : </label>
-     <input type='' name='phone'  placeholder='enter phone number' required  onChange={e=> setData({...data,phone:e.target.value})}/><br></br>
+     <input type='Number' name='phone'  placeholder='enter phone number' required  onChange={e=> setData({...data,phone:e.target.value})}/><br></br>
      <label>Event Type : </label>
      <input type='' name='eventtype'  placeholder='enter type of event' required onChange={e=> setData({...data,eventtype:e.target.value})} />
      <label>Date : </label>
-     <input type='' name='siku'  placeholder='enter event date' required onChange={e=> setData({...data,siku:e.target.value})} /><br></br>
+     <input type='Date' name='siku'  placeholder='enter event date' required onChange={e=> setData({...data,siku:e.target.value})} /><br></br>
      <label>Guest Count : </label>
-     <input type='' name='guestcount'  placeholder='enter number of guest' required onChange={e=> setData({...data,guestcount:e.target.value})}/><br></br>
+     <input type='Number' name='guestcount'  placeholder='enter number of guest' required onChange={e=> setData({...data,guestcount:e.target.value})}/><br></br>
       <Button variant="primary" type="submit" onSubmit={handleSubmit}>
         Submit
       </Button>

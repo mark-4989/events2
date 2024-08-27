@@ -12,7 +12,8 @@ const app = express();
 // ensuring post is ok
 app.use(bodyParser.json({extended:true}))
 app.use(bodyParser.urlencoded({extended:true}))
-app.use(cors('http://localhost:3000/'))
+app.use(express.json())
+app.use(cors(`http://localhost:3000/`))
 
 app.use('/api', postsRoutes)
 // connection string
