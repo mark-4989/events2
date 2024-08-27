@@ -1,3 +1,4 @@
+import mongoose from 'mongoose'
 import clientel from '../models/userModel.js'
 
 // an asyncronus function
@@ -19,4 +20,12 @@ try {
 } catch (error) {
   res.status(409).json({message: error.message})
 }
+    }
+
+    export const updateDetails = async (req,res) =>{
+const {id: _id} = req.params;
+const wants = req.body;
+if(!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send('invalid id')
+  const updatedDetails = await clientel.findByIdAndUpdate(_id,wants,{new:true})
+res.json(updatedDetails)
     }

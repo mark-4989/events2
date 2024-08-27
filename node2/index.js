@@ -9,12 +9,12 @@ import postsRoutes from './routes/clientRoutes.js';
 
 const app = express();
 
-app.use('/api', postsRoutes)
-
 // ensuring post is ok
 app.use(bodyParser.json({extended:true}))
 app.use(bodyParser.urlencoded({extended:true}))
+app.use(cors())
 
+app.use('/api', postsRoutes)
 // connection string
 const CONNECTION_URL='mongodb://localhost:27017/';
 const PORT= process.env.PORT || 3001
