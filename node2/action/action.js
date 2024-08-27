@@ -25,7 +25,15 @@ try {
     export const updateDetails = async (req,res) =>{
 const {id: _id} = req.params;
 const wants = req.body;
-if(!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send('invalid id')
+if(!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send('unable to update invalid id')
   const updatedDetails = await clientel.findByIdAndUpdate(_id,wants,{new:true})
 res.json(updatedDetails)
+    }
+
+    export const deleteDetails = async (req,res) =>{
+      const {id} =req.params;
+
+      if(!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send('unable to delete invalid id');
+         await clientel.findByIdAndDelete(id);
+        res.json({message:'post deleted successfuly'});
     }
