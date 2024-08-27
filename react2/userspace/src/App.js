@@ -6,6 +6,7 @@ import Contact from './components/contact';
 import Gallery from './components/gallery';
 import About from './components/about';
 import Services from './components/services';
+import Table from './components/table';
 import{BrowserRouter,Routes,Route}from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -21,6 +22,7 @@ function App() {
     <Route path='/gallery' element={<Gallery/>}></Route>
     <Route path='/contact' element={<Contact/>}></Route>
     <Route path='/services' element={<Services/>}></Route>
+    <Route path='/table' element={<Table/>}></Route>
   </Routes>
   </BrowserRouter>
  

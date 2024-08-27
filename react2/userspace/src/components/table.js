@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 function Table(){
     const[Client,setClient]=useState([])
     useEffect(()=>{
         axios.get('http://localhost:3001/api')
-        .then(res =>console.log(res))
+        .then(res =>setClient(res.data))
         .catch(err =>console.log(err))
     },[] )
     return(
@@ -24,15 +25,15 @@ function Table(){
             </tr>
         </thead>
         <tbody>
-            { Client.map((Client)=>{
-                  <tr>
-                  <td>First Name</td>
-                  <td>Last Name</td>
-                  <td>Email</td>
-                  <td>Phone Number</td>
-                  <td>Event Type</td>
-                  <td>Date</td>
-                  <td>Guest Count</td>
+            { Client.map((Client,index)=>{
+                return  <tr key={index}>
+                  <td>{Client.firstname}</td>
+                  <td>{Client.lastname}</td>
+                  <td>{Client.email}</td>
+                  <td>{Client.phone}</td>
+                  <td>{Client.eventtype}</td>
+                  <td>{Client.siku}</td>
+                  <td>{Client.guestcount}</td>
               </tr>
             })
       
