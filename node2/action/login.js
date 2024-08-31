@@ -1,5 +1,6 @@
 import mongoose, { Error } from "mongoose";
 import  entrence from '../models/loginModel.js'
+import bcrypt from 'bcrypt'
 
 export const createLogin = async (req,res,next)=>{
     const data ={
@@ -38,6 +39,20 @@ try {
  
 } catch (error) {
     // res.status(409).json({message: error.message}) 
+    res.send(console.log(error))
+}
+}
+
+export const actualLogin = async (req,res)=>{
+try {
+    const check = await entrence.findOne({userName: req.body.userName})
+    if(!check)
+        throw res.send("username cannot be found")
+    const pass = await bcrypt.compare(req.body.password,check.password)
+    if(pass)
+        throw res.send(console.log(Error))
+        
+} catch (error) {
     res.send(console.log(error))
 }
 }
