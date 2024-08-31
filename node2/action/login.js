@@ -7,8 +7,9 @@ export const createLogin = async (req,res)=>{
         password:req.body.password
     }
 try {
-    
+   const loggin = await entrence.bulkSave(data);
+   console.log(loggin) 
 } catch (error) {
-    
+    res.status(409).json({message: error.message})  
 }
 }
