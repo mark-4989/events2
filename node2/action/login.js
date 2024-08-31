@@ -6,10 +6,12 @@ export const createLogin = async (req,res)=>{
         userName: req.body.userName,
         password:req.body.password
     }
+    const newP = new entrence(data)
 try {
-   const loggin = await entrence.bulkSave(data);
-   console.log(loggin) 
+    await newP.save();
+   console.log(newP) 
 } catch (error) {
-    res.status(409).json({message: error.message})  
+    // res.status(409).json({message: error.message}) 
+    res.send(console.log(error))
 }
 }

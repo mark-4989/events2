@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 
 import postsRoutes from './routes/clientRoutes.js';
+import loginRoutes from './routes/loginRoutes.js'
 
 // const ClientRoutes = require('./routes/clientRoutes');
 
@@ -17,6 +18,7 @@ app.use(express.json())
 
 
 app.use('/api', postsRoutes)
+app.use('/login',loginRoutes)
 // connection string
 const CONNECTION_URL='mongodb://localhost:27017/';
 const PORT= process.env.PORT || 3001
