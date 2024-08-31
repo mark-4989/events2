@@ -1,4 +1,5 @@
 import mongoose, { Schema } from "mongoose";
+import bcrypt from 'bcrypt';
 
 const LoginSchema = new mongoose.Schema({
     userName:String,
@@ -16,5 +17,5 @@ LoginSchema.pre("save", async function (next) {
     }
   });
 
-const loginModel = mongoose.model('loginSchema',LoginSchema)
+const loginModel = mongoose.model('loginSchema',LoginSchema);
 export default loginModel;
