@@ -4,6 +4,8 @@ import pic2 from '../picture/pexels-asadphoto-169198.jpg'
 import pic3 from '../picture/pexels-asadphoto-1024968.jpg'
 // import pic4 from '../images/Savvy Events & Entertainment.jpeg';
 import pic5 from '../picture/pexels-asadphoto-1024993.jpg';
+import { Link } from 'react-router-dom';
+import services from './services.js'
 
 function Home() {
   return (<div>
@@ -72,6 +74,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero,
   </div>
  
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+  <button href={services} >learn more</button>
 </div>
 <div className='card1'>
 <h3>Coprates</h3>
@@ -79,6 +82,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero,
   <img src={pic5} alt='image loading'></img>
   </div>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+  <button href={services} >learn more</button>
 </div>
 <div className='card1'>
  <h3>Social Gathering</h3>
@@ -86,6 +90,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero,
   <img src={pic5} alt='image loading'></img>
   </div>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+  <button href={services} >learn more</button>
 </div>
     </div>
     </div>
