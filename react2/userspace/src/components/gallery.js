@@ -27,6 +27,15 @@ const images=[
     {id:'23',imageName:'social8.jpeg',tag:'social'},
     {id:'24',imageName:'wedd8.jpeg',tag:'wedding'},
     {id:'25',imageName:'corporate9.jpeg',tag:'corporate'},
+    {id:'26',imageName:'social9.jpeg',tag:'social'},
+    {id:'27',imageName:'wedd9.jpeg',tag:'wedding'},
+    {id:'28',imageName:'corporate10.jpeg',tag:'corporate'},
+    {id:'29',imageName:'social10.jpeg',tag:'social'},
+    {id:'30',imageName:'wedd10.jpeg',tag:'wedding'},
+    {id:'31',imageName:'corporate11.jpeg',tag:'corporate'},
+    {id:'32',imageName:'social11.jpg',tag:'social'},
+    {id:'33',imageName:'wedd11.jpeg',tag:'wedding'},
+    {id:'34',imageName:'corporate12.jpg',tag:'corporate'},
 ]
 function Gallery (){
     // used react hooks

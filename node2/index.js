@@ -13,7 +13,7 @@ const app = express();
 app.use(cors(`http://localhost:3000/`))
 // ensuring post is ok
 app.use(bodyParser.json({extended:true}))
-app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser.urlencoded({extended:false}))
 app.use(express.json())
 
 
