@@ -23,8 +23,10 @@ import pic2 from '../picture/pexels-asadphoto-169198.jpg'
     <h2>OUR HISTORY</h2> 
     </div> 
 <div>
-   
-   
+    <div className='early'>
+        <p>it was started in early 200s</p>
+    </div>
+    <div></div>
 </div>
         </div>
     )
