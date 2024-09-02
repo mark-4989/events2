@@ -16,7 +16,7 @@ import pic2 from '../picture/pexels-asadphoto-169198.jpg'
         </p>
     </div>
     <div className="wed2">
-        <img src={pic2} ></img>
+        <img src={pic2} alt='comp' ></img>
     </div>
 </div>
 <div className='us'>
@@ -25,15 +25,17 @@ import pic2 from '../picture/pexels-asadphoto-169198.jpg'
 <div>
 <div className='early'>
         <p>it was started in early 200s</p>
+        <div className='found'>
+    <img src={pic2} alt='ceo' ></img>
+    <p>C.E.O</p>
     </div>
+    </div>
+    
 <div className='glass'>
     <p>     Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.<br></br> Praesent commodo cursus magna, vel scelerisque nisl consectetur.Lorem ipsum dolor sit amet, <br></br>consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.<br></br> Praesent commodo cursus magna, vel scelerisque nisl consectetur.<br></br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br>Nulla vitae elit libero, a pharetra augue mollis interdum.<br></br> Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
 </div>
   
-    <div className='found'>
-    <img src={pic2} ></img>
-    <p>C.E.O</p>
-    </div>
+    
 </div>
         </div>
     )

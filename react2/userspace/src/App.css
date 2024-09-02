@@ -406,7 +406,15 @@ width: 40rem;
 color: #CDCBD6;
 /* float: left; */
     }
-    
+    .found{
+      float: right;
+      /* margin-bottom: 10rem; */
+    }
+    .found img{
+      /* float: right; */
+width: 20vw;
+height: 30vh;
+    }
 @media (max-width: 768px) {
   .icons{
     display:block;
