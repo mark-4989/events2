@@ -5,7 +5,7 @@ import pic2 from '../picture/pexels-asadphoto-169198.jpg'
     return(
     
         <div className="about">
-            <div>
+            <div className='us'>
             <h2>About Us</h2>
             </div>
 <div className="service">
@@ -19,10 +19,12 @@ import pic2 from '../picture/pexels-asadphoto-169198.jpg'
         <img src={pic2} ></img>
     </div>
 </div>
+<div className='us'>
+    <h2>OUR HISTORY</h2> 
+    </div> 
 <div>
-    <div>
-        
-    </div>
+   
+   
 </div>
         </div>
     )
