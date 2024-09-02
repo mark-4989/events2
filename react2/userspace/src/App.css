@@ -492,6 +492,29 @@ position: relative;
  }
  /* about section */
  .glass{
-  
+  width: 80vw;
+  height: 70vh;
+  margin-top: 2rem;
+  margin-left: 1rem;
+ }
+ .glass p{
+  width: 80vw;
+  height: 65vh;
+ }
+ .early{
+  float: none;
+  margin: 1rem;
+  width: 35rem;
+ }
+ .early p{
+  width: 30rem;
+  font-size: 1.5rem;
+ }
+ .found{
+  float: none;
+ }
+ .found img{
+  width: 30vw;
+height: 30vh;
  }
 }
