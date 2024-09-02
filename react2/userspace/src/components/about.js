@@ -30,7 +30,10 @@ import pic2 from '../picture/pexels-asadphoto-169198.jpg'
     <p>     Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.<br></br> Praesent commodo cursus magna, vel scelerisque nisl consectetur.Lorem ipsum dolor sit amet, <br></br>consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.<br></br> Praesent commodo cursus magna, vel scelerisque nisl consectetur.<br></br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br>Nulla vitae elit libero, a pharetra augue mollis interdum.<br></br> Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
 </div>
   
-    <div></div>
+    <div className='found'>
+    <img src={pic2} ></img>
+    <p>C.E.O</p>
+    </div>
 </div>
         </div>
     )

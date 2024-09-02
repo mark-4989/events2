@@ -406,6 +406,7 @@ width: 40rem;
 color: #CDCBD6;
 /* float: left; */
     }
+    
 @media (max-width: 768px) {
   .icons{
     display:block;
