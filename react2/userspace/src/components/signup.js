@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 
 function Signup  () {
     const [reg,setReg] = useState({
-        username:'',
+        userName:'',
         password:''
     })
     const handleSignup = (e)=>{
@@ -18,10 +18,10 @@ axios.post('http://localhost:3001/login/',reg)
 <div>
     <form onSubmit={handleSignup}>
     <label> User Name : </label>
-     <input type='string' name='username'  placeholder='enter user name' required  onChange={e =>setReg({...reg,username:e.target.value})}/>
+     <input type='string' name='userName'  placeholder='enter user name' required  onChange={e =>setReg({...reg,userName:e.target.value})}/>
      <label> Password : </label>
      <input type='password' name='password'  placeholder='enter password' required onChange={e =>setReg({...reg,username:e.target.value})}/><br></br>
-     <label>Email : </label>
+    
      <Button variant="primary" type="submit">
         Submit
       </Button>
