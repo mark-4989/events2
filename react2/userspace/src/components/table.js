@@ -8,10 +8,17 @@ function Table(){
         .then(res =>setClient(res.data))
         .catch(err =>console.log(err))
     },[] )
+    const handleDelete = (id) =>{
+        axios.delete('http://localhost:3001/api/'+id) 
+        .then(res =>{
+            window.location.reload()
+        })
+        .catch(err =>console.log(err))
+    }
     return(
         <div>
 <div>
-    <table>
+    <table className="tables">
         <thead>
             <tr>
                 <th>First Name</th>
@@ -34,6 +41,10 @@ function Table(){
                   <td>{Client.eventtype}</td>
                   <td>{Client.siku}</td>
                   <td>{Client.guestcount}</td>
+                  <td>
+                    <button>edit</button>
+                    <button onClick={(e) => handleDelete(Client._id)} >delete</button>
+                  </td> 
               </tr>
             })
       

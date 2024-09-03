@@ -31,9 +31,12 @@ res.json(updatedDetails)
     }
 
     export const deleteDetails = async (req,res) =>{
-      const {id} =req.params;
+      const id =req.params.id;
+      clientel.findByIdAndDelete({_id: id})
+      .then(res => res.json(res))
+      .catch(err => res.json(err))
 
-      if(!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send('unable to delete invalid id');
-         await clientel.findByIdAndDelete(id);
-        res.json({message:'post deleted successfuly'});
+      // if(!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send('unable to delete invalid id');
+      //    await clientel.findByIdAndDelete(id);
+      //   res.json({message:'post deleted successfuly'});
     }
