@@ -74,7 +74,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero,
   </div>
  
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-  <button href={services} >learn more</button>
+  <Link to='services' className='learner' >learn more</Link>
 </div>
 <div className='card1'>
 <h3>Coprates</h3>
@@ -82,7 +82,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero,
   <img src={pic5} alt='image loading'></img>
   </div>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-  <button href={services} >learn more</button>
+  <Link to='services' className='learner' >learn more</Link>
 </div>
 <div className='card1'>
  <h3>Social Gathering</h3>
@@ -90,7 +90,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero,
   <img src={pic5} alt='image loading'></img>
   </div>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-  <button href={services} >learn more</button>
+  <Link to='services' className='learner' >learn more</Link>
 </div>
     </div>
     </div>
