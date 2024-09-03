@@ -182,8 +182,9 @@ padding: 2rem;
     height: 60vh;
     justify-content: space-around;
     padding-top: 70px;
-    margin-left: 10px;
-    margin-right: 10px;
+    /* margin-left: 10px; */
+    /* margin-right: 10px; */
+    /* padding-left: 20px; */
     /* flex-shrink: calc(20%); */
   }
   .service .wed1 p{

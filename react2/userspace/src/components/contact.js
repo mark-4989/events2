@@ -23,7 +23,7 @@ axios.post('http://localhost:3001/api/',data)
 }
   return (
     <div className='once'>
-    <Form className='forms' onSubmit={handleSubmit}>
+    <Form className='forms' onSubmit={handleSubmit} autoFill='off'>
       <h2>Enter Your Details Here</h2>
      <label>First Name : </label>
      <input type='' name='firstname'  placeholder='enter first name' required  onChange={e=> setData({...data,firstname:e.target.value})}/>
