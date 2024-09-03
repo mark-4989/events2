@@ -7,8 +7,10 @@ import Gallery from './components/gallery';
 import About from './components/about';
 import Services from './components/services';
 import Table from './components/table';
+import Signup from './components/signup';
 import{BrowserRouter,Routes,Route}from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 function App() {
