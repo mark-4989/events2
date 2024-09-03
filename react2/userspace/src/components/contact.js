@@ -47,6 +47,9 @@ axios.post('http://localhost:3001/api/',data)
     <Button variant="primary" type="" href='Table'>
         table
       </Button>
+      <Button variant="primary" type="" href='Signup'>
+        signup
+      </Button>
     </div>
   );
 }
