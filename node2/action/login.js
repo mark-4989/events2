@@ -46,19 +46,19 @@ try {
 
 export const actualLogin = async (req,res)=>{
 // try {
-//     const check = await entrence.findOne({userName: req.body.userName})
+//     const check = await entrence.findOne(req.body)
 //     if(!check)
 //         throw res.send("username cannot be found")
-//     const pass = await bcrypt.compare(req.body.password,check.password)
+//     const pass = await bcrypt.compare(req.body,check.password)
 //     if(pass)
 //         throw res.send(console.log(Error))
         
 // } catch (error) {
 //     res.send(console.log(error))
 // }
-const result = await authSchema.validateAsync(req.body);
-try {
 
+try {
+    const result = await authSchema.validateAsync(req.body);
     res.send(result);
 } catch (error) {
     if (error.isJoi === true) return next(Error.BadRequest);

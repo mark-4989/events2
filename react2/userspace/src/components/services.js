@@ -1,8 +1,11 @@
-import React from "react";
+import React  from "react";
+
 // import './App.css';
 import pic2 from '../picture/pexels-asadphoto-169198.jpg'
 
 function Services (){
+    // import required modules
+
 //     handleThunb = () =>{
 // // thumbnails
 // main = document.getElementById("galla");
@@ -77,6 +80,7 @@ function Services (){
                         <img src={pic2} alt="" id="gallery4" />
                     </li>
                 </ul>
+      
             </div>
     </div>
 </div>
