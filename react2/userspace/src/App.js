@@ -8,6 +8,7 @@ import About from './components/about';
 import Services from './components/services';
 import Table from './components/table';
 import Signup from './components/signup';
+import Login from './components/login'
 import{BrowserRouter,Routes,Route}from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -26,6 +27,7 @@ function App() {
     <Route path='/services' element={<Services/>}></Route>
     <Route path='/table' element={<Table/>}></Route>
     <Route path='/signup' element={<Signup/>}></Route>
+    <Route path='/login' element={<Login/>}></Route>
   </Routes>
   </BrowserRouter>
  

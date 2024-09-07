@@ -28,7 +28,7 @@ axios.post('http://localhost:3001/login/',reg)
         Submit
       </Button>
     </form>
-    <p>already have an account <a>Login</a></p>
+    <p>already have an account <a href="login">Login</a></p>
 </div>
         </div>
     )
