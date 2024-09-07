@@ -22,13 +22,44 @@ try {
 }
     }
 
-    export const updateDetails = async (req,res) =>{
-const {id: _id} = req.params;
-const wants = req.body;
-if(!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send('unable to update invalid id')
-  const updatedDetails = await clientel.findByIdAndUpdate(_id,wants,{new:true})
-res.json(updatedDetails)
+//     export const updateDetails = async (req,res) =>{
+// const {id: _id} = req.params;
+// const wants = req.body;
+// if(!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send('unable to update invalid id')
+//   const updatedDetails = await clientel.findByIdAndUpdate(_id,wants,{new:true})
+// res.json(updatedDetails)
+//     }
+export const updateDetails = async (req, res) => {
+  const { id: _id } = req.params;
+  
+  // Check if _id is valid
+  if (!mongoose.Types.ObjectId.isValid(_id)) {
+    return res.status(400).json({ error: 'Invalid ID' });
+  }
+
+  try {
+    // Validate wants object
+    if (Object.keys(wants).length === 0) {
+      return res.status(400).json({ error: 'No fields to update' });
     }
+
+    const updatedDetails = await clientel.findByIdAndUpdate(
+      _id,
+      wants,
+      { new: true }
+    );
+
+    if (!updatedDetails) {
+      return res.status(404).json({ error: 'Document not found' });
+    }
+
+    res.json(updatedDetails);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Server error' });
+  }
+};
+
 
     export const deleteDetails = async (req,res) =>{
       const id =req.params.id;

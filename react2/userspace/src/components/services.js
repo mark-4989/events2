@@ -1,4 +1,5 @@
-import React  from "react";
+import { useState } from 'react';
+import React from "react";
 
 // import './App.css';
 import pic2 from '../picture/pexels-asadphoto-169198.jpg'
@@ -21,7 +22,7 @@ function Services (){
 // //fourth
 // gallery4 = document.getElementById("gallery4");
 // gallery4Src = document.getElementById("gallery4").src;
-//click
+// click
 // gallery1.addEventListener("click", function() {
 //     main.src = gallery1Src;
 // });
@@ -35,6 +36,18 @@ function Services (){
 //     main.src = gallery4Src;
 // });
     // }
+    const [currentImage, setCurrentImage] = useState('galla');
+
+    const galleryImages = [
+      { id: 'gallery1', src: '../picture/pexels-asadphoto-1024968.jpg' },
+      { id: 'gallery2', src: '../public/images/wedd6.jpeg' },
+      { id: 'gallery3', src: 'path/to/gallery3.jpg' },
+      { id: 'gallery4', src: 'path/to/gallery4.jpg' }
+    ];
+  
+    const handleImageChange = (newSrc) => {
+      setCurrentImage(newSrc);
+    };
     return(
     <div className="servicess">
 <div className="service">
@@ -64,9 +77,9 @@ function Services (){
     </div>
     <div className="wedd1">
         <img src={pic2} alt="please wait"  id="galla" ></img>
-        
-        <div class="thumbnails">
-                <ul>
+        {/* <img src= alt="Main Image" /> */}
+        <div class="thumbnails" id='thumb'>
+                {/* <ul>
                     <li>
                         <img src={pic2} alt="" id="gallery1" />
                     </li>
@@ -79,7 +92,18 @@ function Services (){
                     <li>
                         <img src={pic2} alt="" id="gallery4" />
                     </li>
-                </ul>
+                </ul> */}
+                    
+      <div className="gallery">
+        {galleryImages.map((image) => (
+          <img
+            key={image.id}
+            src={image.src}
+            alt={`Gallery ${image.id}`}
+            onClick={() => handleImageChange(image.src)}
+          />
+        ))}
+      </div>
       
             </div>
     </div>
