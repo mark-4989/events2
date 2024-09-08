@@ -22,7 +22,7 @@ axios.post('http://localhost:3001/login/',reg)
     <label> User Name : </label>
      <input type='string' name='userName'  placeholder='enter user name' required  onChange={e =>setReg({...reg,userName:e.target.value})}/>
      <label> Password : </label>
-     <input type='password' name='password'  placeholder='enter password' required onChange={e =>setReg({...reg,username:e.target.value})}/><br></br>
+     <input type='password' name='password'  placeholder='enter password' required onChange={e =>setReg({...reg,password:e.target.value})}/><br></br>
     
      <Button variant="primary" type="submit">
         Submit
