@@ -12,6 +12,7 @@ e.preventDefault()
 axios.post('http://localhost:3001/login/',reg)
 .then(res=>{console.log(res)
     window.location.reload()
+    
 })
 .catch(err =>console.log(err))
     }

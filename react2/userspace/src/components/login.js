@@ -2,16 +2,19 @@ import React  from "react";
 import Button from 'react-bootstrap/Button';
 import axios from "axios";
 import { useState } from 'react';
+import {useNavigate} from 'react-router-dom'
 function Login  () {
     const [logg,setLogg] = useState({
         userName:'',
         password:''
     })
+    const navigate = useNavigate()
     const handleLogg = (e)=>{
 e.preventDefault()
 axios.post('http://localhost:3001/login/',logg)
 .then(res=>{console.log(res)
-    window.location.reload()
+    // window.location.reload()
+navigate('/table')
 })
 .catch(err =>console.log(err))
     }
