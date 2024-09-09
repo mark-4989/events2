@@ -4,13 +4,15 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 
 import postsRoutes from './routes/clientRoutes.js';
-import loginRoutes from './routes/loginRoutes.js'
-
+import loginRoutes from './routes/loginRoutes.js' 
 // const ClientRoutes = require('./routes/clientRoutes');
 
 const app = express();
 
-app.use(cors(`http://localhost:3000/`))
+app.use(cors({
+    origin:[ `http://localhost:3000/`],
+    credentials : true
+}))
 // ensuring post is ok
 app.use(bodyParser.json({extended:true}))
 app.use(bodyParser.urlencoded({extended:false}))

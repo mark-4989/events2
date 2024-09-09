@@ -2,6 +2,7 @@ import mongoose, { Error } from "mongoose";
 import  entrence from '../models/loginModel.js'
 import bcrypt from 'bcrypt'
 import authSchema from './valid.js'
+import Jwt from 'jsonwebtoken'
 
 export const createLogin = async (req,res,next)=>{
     const data ={
@@ -44,7 +45,46 @@ try {
 }
 }
 
-export const actualLogin = async (req,res)=>{
+
+
+export const actualLogin = async (req, res) => {
+  try {
+    // Find one user based on username
+    const user = await entrence.findOne({ userName: req.body.userName });
+    
+    if (!user) {
+      return res.status(404).send("Username not found");
+    }
+
+    // Compare passwords
+    const match = await bcrypt.compare(req.body.password, user.password);
+    
+    if (!match) {
+      return res.status(401).send("Invalid password");
+    }
+
+    // Generate JWT token
+    const token = Jwt.sign(
+      { userId: user._id, userName: user.userName },
+      "jsonwebtokens",
+      { expiresIn: '1h' } // Token expires in 1 hour
+    );
+
+    // Send token in the response
+    res.status(200).json({
+      message: "Login successful",
+      token: token
+    });
+    req.cookie('token',token,{maxAge: 70000})
+
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("An error occurred during login");
+  }
+};
+
+
+// export const actualLogin = async (req,res)=>{
 // try {
 //     const check = await entrence.findOne(req.body)
 //     if(!check)
@@ -55,14 +95,14 @@ export const actualLogin = async (req,res)=>{
         
 // } catch (error) {
 //     res.send(console.log(error))
-// }
+//  }
 
-try {
-    const result = await authSchema.validateAsync(req.body);
-    res.send(result);
-} catch (error) {
-    if (error.isJoi === true) return next(Error.BadRequest);
-    // next(error);
-    res.send(console.log(error))
-}
-}
+// try {
+//     const result = await authSchema.validateAsync(req.body);
+//     res.send(result);
+// } catch (error) {
+//     if (error.isJoi === true) return next(Error.BadRequest);
+//     // next(error);
+//     res.send(console.log(error))
+// }
+// }
