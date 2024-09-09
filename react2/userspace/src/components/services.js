@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import React from "react";
+import {Link} from 'react-router-dom'
+import Gallery from './gallery';
 
 // import './App.css';
 import pic2 from '../picture/pexels-asadphoto-169198.jpg'
@@ -40,9 +42,9 @@ function Services (){
 
     const galleryImages = [
       { id: 'gallery1', src: '../picture/pexels-asadphoto-1024968.jpg' },
-      { id: 'gallery2', src: '../public/images/wedd6.jpeg' },
-      { id: 'gallery3', src: 'path/to/gallery3.jpg' },
-      { id: 'gallery4', src: 'path/to/gallery4.jpg' }
+      { id: 'gallery2', src: '/images/wedd6.jpeg' },
+      { id: 'gallery3', src: '/images/wedd7.jpeg' },
+      { id: 'gallery4', src: '/images/wedd8.jpeg' }
     ];
   
     const handleImageChange = (newSrc) => {
@@ -76,7 +78,7 @@ function Services (){
 </ul>
     </div>
     <div className="wedd1">
-        <img src={pic2} alt="please wait"  id="galla" ></img>
+        <img src={currentImage} alt="please wait"  id="galla" ></img>
         {/* <img src= alt="Main Image" /> */}
         <div class="thumbnails" id='thumb'>
                 {/* <ul>
@@ -103,6 +105,7 @@ function Services (){
             onClick={() => handleImageChange(image.src)}
           />
         ))}
+        <Link to="/gallery" >see more</Link>
       </div>
       
             </div>
