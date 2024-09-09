@@ -42,34 +42,12 @@ try {
 // res.json(updatedDetails)
 //     }
 export const updateDetails = async (req, res) => {
-  const { id: _id } = req.params;
-  
-  // Check if _id is valid
-  if (!mongoose.Types.ObjectId.isValid(_id)) {
-    return res.status(400).json({ error: 'Invalid ID' });
-  }
+ 
+  const id = req.params.id
+  clientel.findByIdAndUpdate({_id : id}, req.body)
+  .then(res => res.json(res))
+  .catch(err => res.json(err))
 
-  try {
-    // Validate wants object
-    if (Object.keys(wants).length === 0) {
-      return res.status(400).json({ error: 'No fields to update' });
-    }
-
-    const updatedDetails = await clientel.findByIdAndUpdate(
-      _id,
-      wants,
-      { new: true }
-    );
-
-    if (!updatedDetails) {
-      return res.status(404).json({ error: 'Document not found' });
-    }
-
-    res.json(updatedDetails);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'Server error' });
-  }
 };
 
 

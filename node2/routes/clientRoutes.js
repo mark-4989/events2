@@ -6,7 +6,7 @@ const router = express.Router();
 router.get('/',getsDetails)
 router.post('/',postsDetails)
 router.get('/:id',detailsId)
-router.patch('/:id',updateDetails)
+router.put('/:id',updateDetails)
 router.delete('/:id',deleteDetails)
 
 export default router;
