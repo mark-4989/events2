@@ -293,6 +293,29 @@ margin-right: 10px;
     height: 20rem;
     background-color: #596235;
    }
+   .coprate .cop1 .thumbnails{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #596235;
+   }
+   .coprate .cop1  .thumbnails ul {
+    display: flex;
+    padding-right: 50px;
+    list-style: none;
+    background-color: #596235;
+  }
+  
+  .coprate .cop1 .thumbnails img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    background-color: #596235;
+  }
    .coprate .cop2{
     background-color: #596235;
    }

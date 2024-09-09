@@ -39,17 +39,26 @@ function Services (){
 // });
     // }
     const [currentImage, setCurrentImage] = useState('galla');
+    const[corporate,setCorporate]=useState('corp')
 
     const galleryImages = [
-      { id: 'gallery1', src: '../picture/pexels-asadphoto-1024968.jpg' },
       { id: 'gallery2', src: '/images/wedd6.jpeg' },
       { id: 'gallery3', src: '/images/wedd7.jpeg' },
       { id: 'gallery4', src: '/images/wedd8.jpeg' }
     ];
+    const corpImages = [
+        { id: 'gallery2', src: '/images/corporate6.jpeg' },
+        { id: 'gallery3', src: '/images/corporate7.jpeg' },
+        { id: 'gallery4', src: '/images/corporate8.jpeg' }
+      ];
   
     const handleImageChange = (newSrc) => {
       setCurrentImage(newSrc);
+      
     };
+    const handleCorpChange = (newSrc) => {
+        setCorporate(newSrc)
+    }
     return(
     <div className="servicess">
 <div className="service">
@@ -124,7 +133,21 @@ function Services (){
 </ul>
     </div>
     <div className="cop1">
-        <img src={pic2} alt="please wait" ></img>
+        {/* <img src={pic2} alt="please wait" ></img> */}
+        <img src={corporate} alt="please wait"  id="corp" ></img>
+        <div class="thumbnails" id='thumb'>
+        <div className="gallery">
+        {corpImages.map((image) => (
+          <img
+            key={image.id}
+            src={image.src}
+            alt={`Gallery ${image.id}`}
+            onClick={() => handleCorpChange(image.src)}
+          />
+        ))}
+        <Link to="/gallery" >see more</Link>
+      </div> 
+        </div>
     </div>
     <div className="cop2">
 <ul>
