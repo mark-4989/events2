@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import {useNavigate, useParams} from 'react-router-dom'
 
 function update (){
+  const {id}=useParams()
+  const{firstname,setFirst}=useState()
+  const{lastname,setLast}=useState()
+  const{email,setEmail}=useState()
+  const{phone,setPhone}=useState()
+  const{eventtype,setEvent}=useState()
+  const{siku,setSiku}=useState()
+  const{guestcount,setGuest}=useState()
+  const navigate = useNavigate(
+
+  )
+
+  useEffect(()=>{
+    axios.get('http://localhost:3001/api/'+id)
+    .then(res =>console.log(res))
+    .catch(err =>console.log(err))
+},[] )
     return(
         <div className='once'>
         <Form className='forms' onSubmit={handleSubmit} autoFill='off'>

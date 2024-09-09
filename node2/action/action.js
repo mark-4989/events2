@@ -11,6 +11,17 @@ try {
 }
 }
 
+export const detailsId = async (req,res) =>{
+  const id = req.params.id
+  // clientel.findById({id})
+  try {
+    const Clientel = await clientel.findById({id})
+    res.status(200).json(Clientel)
+  } catch (error) {
+    res.status(404).json({message: error.message})
+  }
+}
+
     export const postsDetails = async (req,res)=>{
       const post = req.body
 const newPost = new clientel(post)
