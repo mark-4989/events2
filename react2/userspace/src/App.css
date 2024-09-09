@@ -350,6 +350,29 @@ margin-right: 10px;
     width: 25rem;
     height: 20rem;
    }
+   .social .soc1 .thumbnails{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+   }
+   .social .soc1  .thumbnails ul {
+    display: flex;
+    padding-right: 50px;
+    list-style: none;
+  
+  }
+  
+  .social .soc1 .thumbnails img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+
+  }
    /* gallery section */
    .con{
     width: 80%;
