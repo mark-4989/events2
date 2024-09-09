@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Table(){
     const[Client,setClient]=useState([])
@@ -42,7 +43,7 @@ function Table(){
                   <td>{Client.siku}</td>
                   <td>{Client.guestcount}</td>
                   <td>
-                    <button>edit</button>
+                    <Link to={`/update/${Client._id}`}>edit</Link >
                     <button onClick={(e) => handleDelete(Client._id)} >delete</button>
                   </td> 
               </tr>
