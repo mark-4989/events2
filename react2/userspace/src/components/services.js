@@ -8,36 +8,6 @@ import pic2 from '../picture/pexels-asadphoto-169198.jpg'
 
 function Services (){
     // import required modules
-
-//     handleThunb = () =>{
-// // thumbnails
-// main = document.getElementById("galla");
-// //first thumb
-// gallery1 = document.getElementById("gallery1");
-// gallery1Src = document.getElementById("gallery1").src;
-// //sec thumb
-// gallery2 = document.getElementById("gallery2");
-// gallery2Src = document.getElementById("gallery2").src;
-// //third
-// gallery3 = document.getElementById("gallery3");
-// gallery3Src = document.getElementById("gallery3").src;
-// //fourth
-// gallery4 = document.getElementById("gallery4");
-// gallery4Src = document.getElementById("gallery4").src;
-// click
-// gallery1.addEventListener("click", function() {
-//     main.src = gallery1Src;
-// });
-// gallery2.addEventListener("click", function() {
-//     main.src = gallery2Src;
-// });
-// gallery3.addEventListener("click", function() {
-//     main.src = gallery3Src;
-// });
-// gallery4.addEventListener("click", function() {
-//     main.src = gallery4Src;
-// });
-    // }
     const [currentImage, setCurrentImage] = useState('galla');
     const[corporate,setCorporate]=useState('corp')
     const[socials,setSocials]=useState('soci')
@@ -100,20 +70,6 @@ function Services (){
         <img src={currentImage} alt="please wait"  id="galla" ></img>
         {/* <img src= alt="Main Image" /> */}
         <div class="thumbnails" id='thumb'>
-                {/* <ul>
-                    <li>
-                        <img src={pic2} alt="" id="gallery1" />
-                    </li>
-                    <li>
-                        <img src={pic2} alt="" id="gallery2" />
-                    </li>
-                    <li>
-                        <img src={pic2} alt="" id="gallery3" />
-                    </li>
-                    <li>
-                        <img src={pic2} alt="" id="gallery4" />
-                    </li>
-                </ul> */}
                     
       <div className="gallery">
         {galleryImages.map((image) => (
@@ -124,9 +80,8 @@ function Services (){
             onClick={() => handleImageChange(image.src)}
           />
         ))}
-        <Link to="/gallery" >see more</Link>
-      </div>
-      
+        <Link to="/gallery" className='see'>see more</Link>
+      </div>     
             </div>
     </div>
 </div>
@@ -155,7 +110,7 @@ function Services (){
             onClick={() => handleCorpChange(image.src)}
           />
         ))}
-        <Link to="/gallery" >see more</Link>
+        <Link to="/gallery" className='see'>see more</Link>
       </div> 
         </div>
     </div>
@@ -195,7 +150,7 @@ function Services (){
             onClick={() => handleSocChange(image.src)}
           />
         ))}
-        <Link to="/gallery" >see more</Link>
+        <Link to="/gallery" className='see'>see more</Link>
       </div> 
     </div>
 </div>

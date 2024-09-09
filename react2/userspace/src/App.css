@@ -253,6 +253,18 @@ margin-right: 10px;
   border: 2px solid transparent;
   cursor: pointer;
 }
+.wedding .wedd1 .thumbnails .gallery .see{
+  /* text-decoration: none; */
+  background-color: #596235;
+  color: #CDCBD6;
+text-decoration: none;
+border-radius: 10px;
+padding: 10px;
+box-shadow: #596235;
+border: #CDCBD6 2px solid;
+font-weight: bolder;
+}
+
    /* cop card */
    .coprate{
     display: flex;
@@ -292,6 +304,7 @@ margin-right: 10px;
     width: 25rem;
     height: 20rem;
     background-color: #596235;
+
    }
    .coprate .cop1 .thumbnails{
     margin-top: 30px;
@@ -306,7 +319,9 @@ margin-right: 10px;
     list-style: none;
     background-color: #596235;
   }
-  
+  .coprate .cop1  .thumbnails ul li{
+    background-color: #596235;
+  }
   .coprate .cop1 .thumbnails img {
     width: 75px;
     height: 75px;
@@ -315,6 +330,20 @@ margin-right: 10px;
     border: 2px solid transparent;
     cursor: pointer;
     background-color: #596235;
+  }
+  .coprate .cop1 .thumbnails .gallery{
+    background-color: #596235;
+  }
+  .coprate .cop1 .thumbnails .gallery .see{
+    /* text-decoration: none; */
+    background-color: #596235;
+    color: #CDCBD6;
+text-decoration: none;
+border-radius: 10px;
+padding: 10px;
+box-shadow: #596235;
+border: #CDCBD6 2px solid;
+font-weight: bolder;
   }
    .coprate .cop2{
     background-color: #596235;
@@ -372,6 +401,17 @@ margin-right: 10px;
     border: 2px solid transparent;
     cursor: pointer;
 
+  }
+  .social .soc1 .thumbnails .gallery .see{
+    /* text-decoration: none; */
+    /* background-color: #596235; */
+    color: #CDCBD6;
+text-decoration: none;
+border-radius: 10px;
+padding: 10px;
+box-shadow: #596235;
+border: #CDCBD6 2px solid;
+font-weight: bolder;
   }
    /* gallery section */
    .con{
