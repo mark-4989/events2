@@ -586,6 +586,16 @@ position: relative;
  .service .wed2{
   display: none;
  }
+ .coprate{
+  height: 100vh;
+ }
+ .coprate .cop2{
+  background-color: #596235;
+  display: none;
+ }
+.coprate .cop1{
+  margin-bottom: 1rem;
+}
  /* about section */
  .glass{
   width: 80vw;
