@@ -67,7 +67,7 @@ export const actualLogin = async (req, res) => {
     // console.log(process.env.ACCESS_TOKEN_SECRET)
     const users = { userId: user._id, userName: user.userName }
     // Generate JWT token
-    const token = jwt.sign(users,process.env.ACCESS_TOKEN_SECRET );
+    const token = jwt.sign(users,process.env.ACCESS_TOKEN_SECRET,{ expiresIn: '1h' } );
       // { expiresIn: '1h' } // Token expires in 1 hour
    
     
@@ -77,7 +77,7 @@ export const actualLogin = async (req, res) => {
       message: "Login successful",
       token: token
     });
-    res.cookie('token',token,{maxAge: 70000})
+    // res.cookie('token',token,{maxAge: 70000})
 
   } catch (error) {
     console.error(error);
