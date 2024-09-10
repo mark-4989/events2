@@ -43,8 +43,8 @@ function Table(){
                   <td>{Client.siku}</td>
                   <td>{Client.guestcount}</td>
                   <td>
-                    <Link to={`/update/${Client._id}`}>edit</Link >
-                    <button onClick={(e) => handleDelete(Client._id)} >delete</button>
+                    <Link to={`/update/${Client._id}`} className="act" >edit</Link >
+                    <button onClick={(e) => handleDelete(Client._id)} className="act" >delete</button>
                   </td> 
               </tr>
             })

@@ -543,6 +543,19 @@ margin-bottom: 1rem;
       background-color: #596235;
       color: #CDCBD6;
     }
+    /* table part */
+    .tables{
+      border: 1px solid #596235;
+      align-items: center;
+    }
+    .tables thead th {
+      border: 1px solid #596235;
+      padding: 10px;
+    }
+    .tables tbody td{
+      border: 1px solid #596235;
+      padding: 10px;
+    }
 @media (max-width: 768px) {
   .icons{
     display:block;
