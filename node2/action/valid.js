@@ -5,7 +5,7 @@ const authSchema = Joi.object({
     password: Joi.string().min(8).required(),
 });
 
-// const jwtSecret = crypto.randomBytes(32).toString('hex');
+// const jwtSecret = crypto.randomBytes(32).toString('hex');n
 // console.log(jwtSecret);
 
 export default  authSchema ;

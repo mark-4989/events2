@@ -2,7 +2,8 @@ import mongoose, { Error } from "mongoose";
 import  entrence from '../models/loginModel.js'
 import bcrypt from 'bcrypt'
 import authSchema from './valid.js'
-import Jwt from 'jsonwebtoken'
+import jwt from 'jsonwebtoken'
+import 'dotenv/config'
 
 export const createLogin = async (req,res,next)=>{
     const data ={
@@ -62,13 +63,14 @@ export const actualLogin = async (req, res) => {
     if (!match) {
       return res.status(401).send("Invalid password");
     }
-
+ 
+    // console.log(process.env.ACCESS_TOKEN_SECRET)
+    const users = { userId: user._id, userName: user.userName }
     // Generate JWT token
-    const token = Jwt.sign(
-      { userId: user._id, userName: user.userName },
-      "jsonwebtokens",
-      { expiresIn: '1h' } // Token expires in 1 hour
-    );
+    const token = jwt.sign(users,process.env.ACCESS_TOKEN_SECRET );
+      // { expiresIn: '1h' } // Token expires in 1 hour
+   
+    
 
     // Send token in the response
     res.status(200).json({
