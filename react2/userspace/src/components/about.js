@@ -38,6 +38,24 @@ import pic2 from '../picture/pexels-asadphoto-169198.jpg'
   
     
 </div>
+<div className='testimonial'>
+    <div className='testi'>
+        <h3>john doe</h3>
+        <p>Lorem  Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+    <div className='testi'>
+        <h3>john doe</h3>
+        <p>Lorem  Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+    <div className='testi'>
+        <h3>john doe</h3>
+        <p>Lorem  Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+    <div className='testi'>
+        <h3>john doe</h3>
+        <p>Lorem  Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+</div>
         </div>
     )
 }
