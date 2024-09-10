@@ -38,6 +38,9 @@ import pic2 from '../picture/pexels-asadphoto-169198.jpg'
   
     
 </div>
+<div className='us'>
+    <h2>CLIENT TESTIMONIALS</h2> 
+    </div> 
 <div className='testimonial'>
     <div className='testi'>
         <h3>john doe</h3>

@@ -520,6 +520,28 @@ color: #CDCBD6;
 width: 20vw;
 height: 30vh;
     }
+    .testimonial{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin-top: 3rem;
+    }
+    .testimonial .testi{
+      width: 20vw;
+      background-color: #596235;
+      color: #CDCBD6;
+padding: 1.5rem;
+border-radius: 10px;
+    }
+    .testimonial .testi h3{
+      background-color: #596235;
+
+    }
+    .testimonial .testi p{
+      background-color: #596235;
+      color: #CDCBD6;
+    }
 @media (max-width: 768px) {
   .icons{
     display:block;
