@@ -524,15 +524,16 @@ height: 30vh;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-evenly;
+      justify-content: space-around;
       margin-top: 3rem;
     }
     .testimonial .testi{
-      width: 20vw;
+      width: 30vw;
       background-color: #596235;
       color: #CDCBD6;
 padding: 1.5rem;
 border-radius: 10px;
+margin-bottom: 1rem;
     }
     .testimonial .testi h3{
       background-color: #596235;
