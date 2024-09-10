@@ -9,10 +9,9 @@ function Login  () {
         password:''
     })
     const navigate = useNavigate()
-    axios.defaults.withCredentials = true
+    axios.defaults.withCredentials = true;
     const handleLogg = (e)=>{
 e.preventDefault()
-
 axios.post('http://localhost:3001/login/a/',logg)
 .then(res=>{console.log(res)
     // window.location.reload()

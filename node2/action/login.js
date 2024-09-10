@@ -4,6 +4,7 @@ import bcrypt from 'bcrypt'
 import authSchema from './valid.js'
 import jwt from 'jsonwebtoken'
 import 'dotenv/config'
+import 'cookieparser'
 
 export const createLogin = async (req,res,next)=>{
     const data ={
@@ -49,6 +50,7 @@ try {
 
 
 export const actualLogin = async (req, res) => {
+  const {userName,password} = req.body
   try {
     // Find one user based on username
     const user = await entrence.findOne({ userName: req.body.userName });
@@ -62,21 +64,24 @@ export const actualLogin = async (req, res) => {
     
     if (!match) {
       return res.status(401).send("Invalid password");
+    }else{
+ // console.log(process.env.ACCESS_TOKEN_SECRET)
+//  const users = { userId: user._id, userName: user.userName }
+ // Generate JWT token
+ const token = jwt.sign({password: password},process.env.ACCESS_TOKEN_SECRET,{ expiresIn: '20s' } );
+ const refresh = jwt.sign({password: password},process.env.REFRESH_TOKEN,{expiresIn: '5m'})
+
+ res.cookie('token',token,{maxAge: 7000}),
+ res.cookie('refresh',refresh,{maxAge: 90000, httpOnly: true,secure:true,sameSite: 'strict'})
+
+ // Send token in the response
+ res.status(200).json({
+   message: "Login successful",
+   token: token
+ });
     }
  
-    // console.log(process.env.ACCESS_TOKEN_SECRET)
-    const users = { userId: user._id, userName: user.userName }
-    // Generate JWT token
-    const token = jwt.sign(users,process.env.ACCESS_TOKEN_SECRET,{ expiresIn: '1h' } );
-      // { expiresIn: '1h' } // Token expires in 1 hour
    
-    
-
-    // Send token in the response
-    res.status(200).json({
-      message: "Login successful",
-      token: token
-    });
     // res.cookie('token',token,{maxAge: 70000})
 
   } catch (error) {
