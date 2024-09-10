@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { CiEdit } from "react-icons/ci";
+import { RiDeleteBin6Fill } from "react-icons/ri";
 
 function Table(){
     const[Client,setClient]=useState([])
@@ -43,8 +45,9 @@ function Table(){
                   <td>{Client.siku}</td>
                   <td>{Client.guestcount}</td>
                   <td>
-                    <Link to={`/update/${Client._id}`} className="act" >edit</Link >
-                    <button onClick={(e) => handleDelete(Client._id)} className="act" >delete</button>
+                    <Link to={`/update/${Client._id}`} className="act" ><CiEdit /></Link >
+                    <button onClick={(e) => handleDelete(Client._id)} className="act" ><RiDeleteBin6Fill />
+                    </button>
                   </td> 
               </tr>
             })
