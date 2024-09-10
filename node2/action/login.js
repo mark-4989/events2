@@ -75,7 +75,7 @@ export const actualLogin = async (req, res) => {
       message: "Login successful",
       token: token
     });
-    req.cookie('token',token,{maxAge: 70000})
+    res.cookie('token',token,{maxAge: 70000})
 
   } catch (error) {
     console.error(error);
