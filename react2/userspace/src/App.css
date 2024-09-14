@@ -68,54 +68,93 @@ border-left: 0;
  
 } */
  /* form from contact */
-form {
-  background-color: #596235;
-  /* align-items: center; */
-  /* text-align: center; */
-  width: 40vw;
-  height: 110vh;
-  border-radius: 20px;
-  float: right;
-  margin-top: 50px;
-  /* padding: 20px; */
-  display: block;
-  margin-right: 30px;
-  color: #CDCBD6;
+ .contact-section {
+  padding: 60px 0;
+  /* background-color: #f5f5f5; */
 }
-.forms h2{
-  background-color: #596235;
-  text-align: center;
-  padding: 10px;
-  border-radius: 20px;
-  font-size: 2.1rem;
 
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
-.forms label{
-  background-color: #596235;
-  color: black;
-  /* align-items: center; */
+
+h2 {
+  color: #333;
   text-align: center;
-  padding-right: 20px;
-  padding-top: 40px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  font-size: 1.3rem;
-  display: block;
+  margin-bottom: 40px;
 }
-.forms input{
-  margin-right: 20px;
-  text-align: center;
-  background-color: #596235;
-  color: #CDCBD6;
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-items: center;
-  margin-left: 8rem;
-  border-radius: 20px;
-  width: 23rem;
 }
-.form Button{
-  align-items: center;
-  margin-left: 8rem;
+
+.form-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    flex-direction: column;
+  }
+
+  .form-group {
+    width: 100%;
+  }
 }
 /* div from home */
   .second{
@@ -565,6 +604,61 @@ margin-right: 2px;
 /* width: 60px; */
 size: 50px;
     }
+    /* login part */
+    .login-form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #596235;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(75, 68, 68, 0.1);
+    }
+
+    .login-form h2{
+      background-color: #596235;
+      color: #CDCBD6;
+    }
+
+    .login-form form{
+      height: 0;
+      background-color: #596235;
+    }
+    .form-group {
+      margin-bottom: 15px;
+      /* background-color: #596235; */
+      color: #CDCBD6;
+    }
+    
+    .label {
+      display: block;
+      margin-bottom: 5px;
+      /* background-color: #596235; */
+      color: #CDCBD6;
+    }
+    
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      /* background-color: #596235; */
+    }
+    
+    .button-container {
+      text-align: center;
+    }
+    
+    .signup-link {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .signup-link:hover {
+      text-decoration: underline;
+    }
+    
 @media (max-width: 768px) {
   .icons{
     display:block;

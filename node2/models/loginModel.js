@@ -1,9 +1,15 @@
 import mongoose, { Schema } from "mongoose";
 import bcrypt from 'bcrypt';
+// import { string } from "joi";
 
 const LoginSchema = new mongoose.Schema({
     userName:String,
-    password:String
+    password:String,
+    roles:{
+type: String,
+enum:['user','admin'],
+default: 'user'
+    }
 }) 
 // hashing password,install a bcrypt package
 LoginSchema.pre("save", async function (next) {

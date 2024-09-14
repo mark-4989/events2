@@ -2,7 +2,7 @@ import React  from "react";
 import Button from 'react-bootstrap/Button';
 import axios from "axios";
 import { useState } from 'react';
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, Link} from 'react-router-dom'
 function Login  () {
     const [logg,setLogg] = useState({
         userName:'',
@@ -21,16 +21,22 @@ navigate('/table')
     }
     return(
         <div>
-<div>
+<div className="login-form">
+    <h2>Login</h2>
     <form onSubmit={handleLogg}>
-    <label> User Name : </label>
-     <input type='string' name='username'  placeholder='enter user name' required onChange={e =>setLogg({...logg,userName:e.target.value})} />
-     <label> Password : </label>
-     <input type='password' name='password'  placeholder='enter password' required onChange={e =>setLogg({...logg,password:e.target.value})} /><br></br>
-     <label>Email : </label>
-     <Button variant="primary" type="submit">
+        <div className="form-group"> 
+    <label className="label"> User Name : </label>
+     <input className="input-field" type='string' name='username'  placeholder='enter user name' required onChange={e =>setLogg({...logg,userName:e.target.value})} />
+     </div>
+     <div className="form-group">  
+     <label className="label"> Password : </label>
+     <input className="input-field" type='password' name='password'  placeholder='enter password' required onChange={e =>setLogg({...logg,password:e.target.value})} /><br></br>
+     {/* <label>Email : </label> */}
+     </div>
+     <Button variant="primary" type="submit" className="buton-container">
         Submit
       </Button>
+      <>dont have an account <Link to='/signup' className="signup-link" >signup</Link> </>
     </form>
 </div>
         </div>
