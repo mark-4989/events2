@@ -142,9 +142,77 @@ export const otpvery = async ( req,res )=>{
   req.app.locals.resetSession = true ; //starting reset session
   return res.status(200).send({msg: "verify succesfull"})
  }
- return res.status(409).send({msg: "invalid otp"})
+ return res.status(400).send({msg: "invalid otp"})
 
 }
+
+// reset password session
+export const sess = async (req,res) =>{
+if(req.app.locals.resetSession){
+  req.app.locals.resetSession = false; 
+  return res.status(201).send({msg: "access granted"})
+}
+return res.status(440).send({msg: "session expired"})
+
+}
+
+// update password
+// export const upsess = async (req,res) =>{
+// try {
+//   if(!req.app.locals.resetSession){return res.status(440).send({ error:"session expired"})}
+//   else{
+//     const {userName , password} = req.body;
+
+//     entrence.findOneAndUpdate({userName})
+//    req.app.locals.resetSession = false;
+    
+//   }
+  
+// } catch (error) {
+//   console.error(error);
+//   res.status(500).send("An error occurred during update");
+// }
+//   } 
+
+ // Assuming you have a User model
+
+export const updatePassword = async (req, res) => {
+  try {
+    if (!req.app.locals.resetSession) {
+      return res.status(401).json({ error: "Unauthorized" });
+    }
+
+    const { oldPassword, newPassword } = req.body;
+
+    if (!oldPassword || !newPassword) {
+      return res.status(400).json({ error: "Old password and new password are required" });
+    }
+
+    const user = await entrence.findOne({ username: req.app.locals.resetSession.userName });
+
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    const isValidPassword = await bcrypt.compare(oldPassword, user.password);
+
+    if (!isValidPassword) {
+      return res.status(401).json({ error: "Invalid old password" });
+    }
+
+    const saltRounds = 10;
+    const hashedNewPassword = await bcrypt.hash(newPassword, saltRounds);
+
+    await entrence.updateOne({ _id: user._id }, { password: hashedNewPassword });
+
+    req.session.user = { ...req.app.locals.resetSession, password: hashedNewPassword };
+
+    res.json({ message: "Password updated successfully" });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "An error occurred during password update" });
+  }
+};
 
 
 export const actualLogin = async (req, res) => {
