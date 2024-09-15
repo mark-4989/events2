@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
+import convertToBase64 from "./converter";
 
 function Signup  () {
     const [reg,setReg] = useState({
@@ -9,8 +10,10 @@ function Signup  () {
         password:''
     })
     const [confirm,setconfirm]= useState()
-    const handleSignup = (e)=>{
+    // const [file,setFile] = useState()
+    const handleSignup = async (e)=>{
 e.preventDefault()
+//  await Object.assign({profile : file || ''})
 if(!reg.password === confirm){
     console.log('confirm password')
 }else{
@@ -23,11 +26,19 @@ if(!reg.password === confirm){
 }
 
     }
+    // const onUpload = async e =>{
+    //     const base64 = await convertToBase64(e.target.file[0]);
+    //     setFile(base64)
+    // }
     return(
         <div>
 <div className="login-form" >
     <h2>Sign-up</h2>
     <form onSubmit={handleSignup}>
+    {/* <div className="form-group">
+        <label> </label><img src='' alt="profile" > </img>  
+     <input className="input-field" type='file' name='profile'  placeholder='enter user name' required  onChange={onUpload}/>
+     </div> */}
         <div className="form-group"> 
     <label className="label" > User Name : </label>
      <input className="input-field" type='string' name='userName'  placeholder='enter user name' required  onChange={e =>setReg({...reg,userName:e.target.value})}/>
