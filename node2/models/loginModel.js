@@ -3,7 +3,10 @@ import bcrypt from 'bcrypt';
 // import { string } from "joi";
 
 const LoginSchema = new mongoose.Schema({
-    userName:String,
+    userName:{
+      type: String,
+      Unique: true
+    },
     password:String,
     roles:{
 type: String,

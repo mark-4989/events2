@@ -6,6 +6,19 @@ import jwt from 'jsonwebtoken'
 import 'dotenv/config'
 import 'cookieparser'
 
+export const getUser = async (req,res) =>{
+  const {userName} = req.params
+  // clientel.findById({id})
+  try {
+    if(!userName) return res.status(501).send({error:'invalid username'})
+    const Clientel = await entrence.findOne({userName})
+    res.status(200).json(Clientel)
+  } catch (error) {
+    res.status(404).json({message: error.message})
+    console.log(error.message)
+  }
+}
+
 export const createLogin = async (req,res,next)=>{
     const data ={
         userName: req.body.userName,
